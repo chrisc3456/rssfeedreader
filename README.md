@@ -14,3 +14,5 @@ Example Android application, written in Kotlin, to retrieve and display items fr
 * SwipeRefreshLayout
 * Text input
 * XML parsing
+
+[[https://github.com/chrisc3456/rssfeedreader/blob/master/screenshot.png]]

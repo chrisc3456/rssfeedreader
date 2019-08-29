@@ -15,4 +15,4 @@ Example Android application, written in Kotlin, to retrieve and display items fr
 * Text input
 * XML parsing
 
-[[https://github.com/chrisc3456/rssfeedreader/blob/master/screenshot.png]]
+![screenshot](https://github.com/chrisc3456/rssfeedreader/blob/master/screenshot.png)

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="title" type="String"/>
+        <variable name="description" type="String"/>
+        <variable name="published" type="String"/>
+        <variable name="categories" type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintListItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryText"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{title}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dividerCardStart"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="News article headline text" />
+
+        <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{description}"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dividerCardStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:text="Description" />
+
+        <TextView
+                android:id="@+id/textViewPublished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{published}"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dividerCardStart"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+                tools:text="Date Published" />
+
+        <View
+                android:id="@+id/dividerVertical"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewPublished"
+                app:layout_constraintStart_toEndOf="@+id/textViewPublished"
+                app:layout_constraintTop_toTopOf="@+id/textViewPublished" />
+
+        <TextView
+                android:id="@+id/textViewCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="@{categories}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dividerVertical"
+                app:layout_constraintTop_toTopOf="@+id/textViewPublished"
+                tools:text="Category List" />
+
+        <View
+                android:id="@+id/dividerCardStart"
+                android:layout_width="4dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewPublished"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
